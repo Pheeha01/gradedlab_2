@@ -25,8 +25,7 @@ div{
     text-align: right;
 }
 .id:nth-child(2), #class:nth-child(3), span:not([id]):not([class]){
-    display: inline-flex;
-    
+    display: inline-flex; 
 }
 #class:nth-child(3){
     text-align: left;
