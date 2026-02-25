@@ -1,0 +1,37 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    border: black solid 2px;
+    font-family: "Comic Sans MS";
+}
+.id {
+    background-color: yellow;
+}
+.class{
+    font-style: italic;
+    display: block;
+}
+div{
+    border: black solid 2px;
+    margin: 0;
+}
+#H{
+    width: 33.33%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+.id:nth-child(2), #class:nth-child(3), span:not([id]):not([class]){
+    display: inline-flex;
+    
+}
+#class:nth-child(3){
+    text-align: left;
+    width:14.12cm;
+ }
+div:nth-child(2){
+    text-align: right;
+}
