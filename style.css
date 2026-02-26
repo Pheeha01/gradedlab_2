@@ -1,5 +1,5 @@
 * {
-  font-family: "Comic Sans MS", cursive;
+  font-family: "Comic Sans MS";
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,37 +18,40 @@ div.id {
   text-align: left;
 }
 
-/* Row 2 - B, C, D */
-body > div > div {
+/* Row 2 BCD */
+div:nth-child(2) {
   display: grid;
   grid-template-columns: 1fr auto auto;
   border: 2px solid black;
 }
 
+/*C C C C*/
 span#id {
   grid-column: 2;
   grid-row: 1;
 }
 
-/* d spanning to the left sid */
+/*B B B B*/
+span:nth-child(1) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/*D D D D*/
 span.class {
   grid-column: 3;
   grid-row: 2;
   font-style: italic;
 }
 
-span {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-/* Row 3 */
+/* Row 3 EFGH*/
 div.class {
   display: grid;
   grid-template-columns: auto 1fr auto;
   border: 2px solid black;
 }
 
+/*F F F F*/
 div.class > div.id {
   grid-column: 1;
   grid-row: 1;
@@ -56,17 +59,20 @@ div.class > div.id {
   border: 2px solid black;
 }
 
-div#class {
+/*G G G G*/
+div.class > div#class {
   grid-column: 2;
   grid-row: 1;
   border: 2px solid black;
 }
 
+/*E E E E*/
 div.class > span {
   grid-column:3;
   grid-row: 1;
 }
 
+/*H H H H*/
 div#H {
   grid-column: 2;
   grid-row: 2;
