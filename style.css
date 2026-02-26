@@ -1,36 +1,77 @@
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  font-family: "Comic Sans MS", cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
-    border: black solid 2px;
-    font-family: "Comic Sans MS";
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
 }
-.id {
-    background-color: yellow;
+
+/* A A A A */
+div.id {
+  background-color: yellow;
+  border: 2px solid black;
+  text-align: left;
 }
-.class{
-    font-style: italic;
-    display: block;
+
+/* Row 2 - B, C, D */
+body > div > div {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  border: 2px solid black;
 }
-div{
-    border: black solid 2px;
-    margin: 0;
+
+span#id {
+  grid-column: 2;
+  grid-row: 1;
 }
-#H{
-    width: 33.33%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right;
+
+/* d spanning to the left sid */
+span.class {
+  grid-column: 3;
+  grid-row: 2;
+  font-style: italic;
 }
-.id:nth-child(2), #class:nth-child(3), span:not([id]):not([class]){
-    display: inline-flex; 
+
+span {
+  grid-column: 3;
+  grid-row: 1;
 }
-#class:nth-child(3){
-    text-align: left;
-    width:14.12cm;
- }
-div:nth-child(2){
-    text-align: right;
+
+/* Row 3 */
+div.class {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border: 2px solid black;
+}
+
+div.class > div.id {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: yellow;
+  border: 2px solid black;
+}
+
+div#class {
+  grid-column: 2;
+  grid-row: 1;
+  border: 2px solid black;
+}
+
+div.class > span {
+  grid-column:3;
+  grid-row: 1;
+}
+
+div#H {
+  grid-column: 2;
+  grid-row: 2;
+  width: 33.33%;
+  margin: 0 auto;
+  border: 2px solid black;
+  text-align: right;
 }
